@@ -1,69 +1,194 @@
-# Welcome to your Lovable project
+# DJ Portfolio Application
 
-## Project info
+[![React](https://img.shields.io/badge/React-18.3.1-61DAFB?logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.5.3-3178C6?logo=typescript)](https://www.typescriptlang.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-18.x-339933?logo=node.js)](https://nodejs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.11-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
+[![Express](https://img.shields.io/badge/Express-4.21.2-000000?logo=express)](https://expressjs.com/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-7.0-47A248?logo=mongodb)](https://www.mongodb.com/)
 
-**URL**: https://lovable.dev/projects/3320253a-1e1d-4410-afda-cc1d408a2fd2
+A professional portfolio website for DJs with an integrated admin panel for managing content and responding to inquiries. This full-stack application showcases music, events, a gallery, and offers contact functionality.
 
-## How can I edit this code?
+![DJ Portfolio Preview Intro](https://github.com/patrik-fredon/dj_portfolio/raw/public/dj_portfolio_preview_1.png)
 
-There are several ways of editing your application.
+## ✨ Features
 
-**Use Lovable**
+- **Responsive Design** - Optimized for all device sizes
+- **Music Showcase** - Display tracks with interactive audio player
+- **Image Gallery** - Categorized gallery with modal view
+- **Contact Form** - Integrated with email notifications
+- **Admin Panel** - Secure access to manage inquiries
+- **Animations** - Smooth scroll reveal and transition effects
+- **Modern UI** - Clean, professional interface with Tailwind CSS and shadcn/ui
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3320253a-1e1d-4410-afda-cc1d408a2fd2) and start prompting.
+## 🛠️ Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+### Frontend
+- [React](https://reactjs.org/) with [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/) - Fast build tool and dev server
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [shadcn/ui](https://ui.shadcn.com/) - Unstyled UI components
+- [Lucide Icons](https://lucide.dev/) - Beautiful SVG icons
+- [React Router](https://reactrouter.com/) - Client-side routing
+- [React Query](https://tanstack.com/query) - Data fetching and caching
 
-**Use your preferred IDE**
+### Backend
+- [Node.js](https://nodejs.org/) with [Express](https://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/) with [Mongoose](https://mongoosejs.com/)
+- [AdminJS](https://adminjs.co/) - Admin panel framework
+- [Nodemailer](https://nodemailer.com/) - Email sending functionality
+- [Express Session](https://www.npmjs.com/package/express-session) - Session management
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+![DJ Portfolio Preview](https://github.com/patrik-fredon/dj_portfolio/raw/public/dj_portfolio_preview_2.png)
+![DJ Portfolio Preview](https://github.com/patrik-fredon/dj_portfolio/raw/public/dj_portfolio_preview_3.png)
+![DJ Portfolio Preview](https://github.com/patrik-fredon/dj_portfolio/raw/public/dj_portfolio_preview_4.png)
+![DJ Portfolio Preview](https://github.com/patrik-fredon/dj_portfolio/raw/public/dj_portfolio_preview_5.png)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🗂️ Project Structure
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+```
+/
+├── backend/               # Backend Express application
+│   ├── components/        # AdminJS UI components
+│   ├── config/            # Database configuration
+│   ├── models/            # Mongoose schemas
+│   ├── utils/             # Backend utilities
+│   └── server.js          # Main server file
+├── src/
+│   ├── components/        # React components
+│   │   ├── contact/       # Contact-related components
+│   │   └── ui/            # Reusable UI components
+│   ├── hooks/             # Custom React hooks
+│   ├── lib/               # Frontend utilities
+│   ├── pages/             # Route pages
+│   └── types/             # TypeScript type definitions
+├── public/                # Static assets
+└── ...config files
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🚀 Getting Started
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Prerequisites
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+- Node.js 18+ and npm/yarn
+- MongoDB database
+
+### Installation
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/patrik-fredon/dj-portfolio.git
+cd dj-portfolio
+```
+
+2. **Install dependencies**
+
+```bash
+# Install frontend dependencies
+npm install
+
+# Install backend dependencies
+cd backend
+npm install
+cd ..
+```
+
+3. **Environment Setup**
+
+Create .env files based on the examples:
+
+**Frontend**
+.env:
+
+```
+VITE_API_URL=http://localhost:5000
+VITE_ADMIN_URL=http://localhost:5000/admin
+```
+
+**Backend**
+.env:
+
+```
+MONGODB_URI=your_mongodb_connection_string
+PORT=5000
+ADMIN_EMAIL=admin@example.com
+ADMIN_PASSWORD=secure_password
+SMTP_HOST=smtp.your-provider.com
+SMTP_PORT=587
+SMTP_USER=your-email@example.com
+SMTP_PASS=your-email-password
+SESSION_SECRET=your-session-secret
+```
+
+4. **Run the application**
+
+```bash
+# Run frontend and backend concurrently in development mode
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The frontend will be available at http://localhost:8080 and the backend at http://localhost:5000
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+#### API Endpoints
 
-**Use GitHub Codespaces**
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/contact` | POST | Submit a contact message |
+| `/admin` | GET | Admin panel interface |
+| `/` | GET | API health check |
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 💌 Contact Form
 
-## What technologies are used for this project?
+The application includes a contact form that:
 
-This project is built with .
+1. Validates user input
+2. Stores messages in MongoDB
+3. Sends email notifications to administrators
+4. Can be managed through the admin panel
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Email sending is handled by the mailer.js utility using Nodemailer.
 
-## How can I deploy this project?
+## 🔐 Admin Panel
 
-Simply open [Lovable](https://lovable.dev/projects/3320253a-1e1d-4410-afda-cc1d408a2fd2) and click on Share -> Publish.
+The application features an admin panel powered by AdminJS:
 
-## I want to use a custom domain - is that possible?
+- Message management
+- Status tracking (unread/read/replied)
+- Filtering and searching messages
+- Authentication system
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+Access the admin panel at `/admin` with the credentials set in your .env file.
+
+## 🔒 Security Features
+
+- CSRF protection
+- Content Security Policy
+- Secure session cookies
+- Rate limiting
+- Input validation
+- Environment variable protection
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 👨‍💻 Author
+
+Patrik Fredon - [FredonBytes](mailto:patrik@fredonbytes.cloud)
+
+---
+
+© 2025 FredonBytes | Bringing your vision to life
