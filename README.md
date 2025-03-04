@@ -9,7 +9,7 @@
 
 A professional portfolio website for DJs with an integrated admin panel for managing content and responding to inquiries. This full-stack application showcases music, events, a gallery, and offers contact functionality.
 
-![DJ Portfolio Preview Intro](https://github.com/patrik-fredon/dj_portfolio/raw/public/dj_portfolio_preview_1.png)
+![](public/dj_portfolio_preview_1.png?raw=true)
 
 ## ✨ Features
 
@@ -39,10 +39,11 @@ A professional portfolio website for DJs with an integrated admin panel for mana
 - [Nodemailer](https://nodemailer.com/) - Email sending functionality
 - [Express Session](https://www.npmjs.com/package/express-session) - Session management
 
-![DJ Portfolio Preview](https://github.com/patrik-fredon/dj_portfolio/raw/public/dj_portfolio_preview_2.png)
-![DJ Portfolio Preview](https://github.com/patrik-fredon/dj_portfolio/raw/public/dj_portfolio_preview_3.png)
-![DJ Portfolio Preview](https://github.com/patrik-fredon/dj_portfolio/raw/public/dj_portfolio_preview_4.png)
-![DJ Portfolio Preview](https://github.com/patrik-fredon/dj_portfolio/raw/public/dj_portfolio_preview_5.png)
+
+|FredonBytes|DJ Portfolio Preview|
+|:-:|:-:|
+|![](public/dj_portfolio_preview_2.png?raw=true&h=750&w=1260)|![](public/dj_portfolio_preview_3.png?raw=true&h=750&w=1260)|
+|![](public/dj_portfolio_preview_4.png?raw=true&h=750&w=1260)|![](public/dj_portfolio_preview_5.png?raw=true&h=750&w=1260)|
 
 ---
 
